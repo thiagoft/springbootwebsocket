@@ -12,7 +12,7 @@ public class MessageController {
 	@MessageMapping("/send")
     @SendTo("/response")
     public Message processaMensagem(Message message) throws Exception {
-        return new Message(message.getContent());
+        return new Message("says:"+message.getContent());
     }
 	
 }
